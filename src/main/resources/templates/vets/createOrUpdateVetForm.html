@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>Add Vet</title>
+</head>
+<body>
+<h2>Add Vet</h2>
+<form th:action="@{/vets/new}" th:object="${vet}" method="post">
+  <label for="firstName">First Name</label>
+  <input type="text" id="firstName" name="firstName" th:field="*{firstName}" required />
+  <br />
+  <label for="lastName">Last Name</label>
+  <input type="text" id="lastName" name="lastName" th:field="*{lastName}" required />
+  <br />
+  <label for="specialties">Specialties</label>
+  <input type="text" id="specialties" name="specialties" th:field="*{specialties}" />
+  <br />
+  <button type="submit">Add Vet</button>
+</form>
+</body>
+</html>
